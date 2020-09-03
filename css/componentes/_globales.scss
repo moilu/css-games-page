@@ -1,0 +1,33 @@
+//Variables(es buena práctica mantener las variables arriba de los demás estilos)
+//En sass las variables se crean utilizando el signo de dólar '$'
+
+//Fuentes
+$fuente-1: 'Lato', sans-serif;
+$fuente-2: 'Oswald', sans-serif;
+//Colores
+$color-primario: #333333;
+$color-claro: #FFFFFF;
+$color-secundario: #8841DA;
+$color-variacion: #3f579a;
+
+@mixin caja {
+    border-radius: 20px;
+    box-shadow: 5px rgba(0,0,0, 0.50);
+    color: $color-primario;
+    background-color: $color-claro;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: $fuente-1;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}

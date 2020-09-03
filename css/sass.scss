@@ -1,0 +1,7 @@
+//Utilizar el @import sirve para modularizar nuestro código de sass.
+// Se divide los estilos de la página en distintos archivos llamados componentes que despues se unen en el archivo principal que 
+//será el que se vinculará a nuestro a html.
+@import "componentes/globales.scss";
+@import "componentes/perfil.scss";
+@import "componentes/estadisticas.scss";
+@import "componentes/ubicaciones.scss";
