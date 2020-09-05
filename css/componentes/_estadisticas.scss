@@ -12,13 +12,11 @@
         font-weight: 300;
         font-size: 20px;
         text-align: center;
-        text-transform: uppercase;
-        font-family: $fuente-2;
+        @include titulos($fuente-2);
     }
     span {
         font-size: 12px;
         text-align: center;
-        text-transform: uppercase;
-        font-family: $fuente-2;
+        @include titulos($fuente-2);
     }
 }

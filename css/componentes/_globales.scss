@@ -12,9 +12,29 @@ $color-variacion: #3f579a;
 
 @mixin caja {
     border-radius: 20px;
-    box-shadow: 5px rgba(0,0,0, 0.50);
+    box-shadow: 0px 20px 33px 0px rgba(0,0,0, 0.50);
     color: $color-primario;
     background-color: $color-claro;
+}
+
+@mixin titulos($fuente) {
+    @if $fuente == $fuente-1 {
+        font-family: $fuente-1;
+    } @else {
+        font-family: $fuente-2;
+        text-transform: uppercase;
+    }
+}
+
+@function get-opacity($color, $nivel){
+    @return rgba($color, $nivel);
+}
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+    #{$header} {
+        font-size: $size;
+        margin: 0;
+    }
 }
 
 * {
@@ -23,11 +43,11 @@ $color-variacion: #3f579a;
 
 body {
     margin: 0;
-    font-family: $fuente-1;
+    @include titulos($fuente-1);
 }
 
 main {
     display: flex;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
